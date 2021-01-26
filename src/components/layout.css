@@ -1,7 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto&display=swap');
+*{
+  max-width: 100vw;
+}
+
 :root{
-  --mainBrown:#2d1ef1;
-  --mainYellow: #ff9e09;
+  --mainBrown:#2d1e1f;
+  --mainYellow: rgb(255, 158, 9);
   --mainGrey: #ece8dc;
   --mainWhite: #fff;
   --mainDark: #222;
@@ -20,7 +24,10 @@ h4,
 h5,
 h6{
   font-family: 'Montserrat', Arial, Helvetica, sans-serif !important;
-  letter-spacing: 1.25rem !important;
+  letter-spacing: 1rem !important;
+}
+h2{
+  letter-spacing: .35rem !important;
 }
 
 .text-yellow{
@@ -30,4 +37,21 @@ h6{
   cursor: pointer;
   color:var(--mainYellow);
   font-size: 2rem;
+}
+/*HERO IMAGE*/
+.default-background{
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-position:center;
+  background-size: cover;
+}
+/*ABOUT US BUTTON ON HOME PAGE */
+.btn-yellow{
+  color: var(--mainYellow);
+  border-color: var(--mainYellow);
+}
+.btn-yellow:hover{
+  background: var(--mainYellow);
 }

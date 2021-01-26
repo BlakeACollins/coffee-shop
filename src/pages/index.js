@@ -1,21 +1,31 @@
 
 import React from "react"
-import { Link } from "gatsby"
+import { Link, graphql } from "gatsby"
 import SEO from "../components/seo"
 import Layout from "../components/layout"
-import { FaGulp } from 'react-icons/fa'
+import HeroSection from '../components/Globals/Hero'
+import About from '../components/Home/About'
 
 
-const IndexPage = () => (
+const IndexPage = ({ data }) => (
   <Layout>
-    <SEO title="Home" />
-    <div>
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>The Coffee Shop made with React, Gatsby, Contenful, Snipcart, and Formspree</p>
-    <FaGulp />
-    </div>
+    <SEO title="Home" keywords={['gatsby', 'application', 'react']} />
+    <HeroSection img={data.img.childImageSharp.fluid} title="regular joe's coffee shop" styleClass='default-background'/>
+    <About />
   </Layout>
-)
+);
+
+export const query = graphql`
+{
+  img: file(relativePath: { eq:
+    "default-background.jpeg"}) {
+  childImageSharp {
+		fluid {
+			...GatsbyImageSharpFluid_tracedSVG
+    }
+  }
+  }
+}
+`;
 
 export default IndexPage;

@@ -41,7 +41,7 @@ export default class Navbar extends Component {
     };
     render() {
         return (
-            <nav className='navbar navbar-expand-sm bg-light navbar-light'>
+            <nav className='navbar navbar-color navbar-expand-sm bg-light navbar-light'>
                 <Link to='/' className='navbar-brand'>
                     <img src={logo} alt="a logo" />
                     {/* https://www.iconfinder.com/icons/185113/coffee_streamline_icon
@@ -54,7 +54,7 @@ https://www.iconfinder.com/webalys */ }
                 <span className='navbar-toggler-icon'/>
                 </button>
                 <div className={this.state.css}>
-                    <ul className="navbar-nav mx-auto">
+                    <ul className="navbar-nav mx-auto navbar-color">
                         {
                             this.state.links.map(link => {
                                 return (
