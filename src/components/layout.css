@@ -47,6 +47,11 @@ h2{
   background-position:center;
   background-size: cover;
 }
+/*REACT TYPED*/
+.typed-text{
+  color: red;
+  text-align: center !important;
+}
 /*ABOUT US BUTTON ON HOME PAGE */
 .btn-yellow{
   color: var(--mainYellow);
@@ -54,4 +59,17 @@ h2{
 }
 .btn-yellow:hover{
   background: var(--mainYellow);
+}
+/*ABOUT US PAGE*******/
+.about-us-background{
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-position:center;
+  background-size: cover;
+}
+/*FOOOTER*****/
+.footer{
+  background-color: rgb(255, 158, 9);
 }

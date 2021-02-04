@@ -7,18 +7,18 @@ import HeroSection from '../components/Globals/Hero'
 import Info from '../components/Home/info'
 
 
-const IndexPage = ({ data }) => (
+
+const About = ({ data }) => (
   <Layout>
-    <SEO title="Home" keywords={['gatsby', 'application', 'react']} />
-    <HeroSection img={data.img.childImageSharp.fluid} title="regular joe's coffee shop" styleClass='default-background'/>
+    <SEO title="About Us" keywords={['gatsby', 'application', 'react']} />
+    <HeroSection img={data.img.childImageSharp.fluid} title="about us" styleClass='about-us-background'/>
     <Info />
   </Layout>
 );
 
 export const query = graphql`
 {
-  img: file(relativePath: { eq:
-    "default-background.jpeg"}) {
+  img: file(relativePath: { eq:"about-background.jpeg"}) {
   childImageSharp {
 		fluid {
 			...GatsbyImageSharpFluid_tracedSVG
@@ -28,4 +28,4 @@ export const query = graphql`
 }
 `;
 
-export default IndexPage;
+export default About;
