@@ -6,3 +6,5 @@ You can find it here, https://frosty-goldberg-a28033.netlify.app/
 
 
 STILL IN PRODUCTION
+
+Adding data to Contentful 2/4/2020
